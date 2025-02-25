@@ -1,0 +1,1 @@
+SELECT count(age) FROM users HAVING COUNT(age) >20;
