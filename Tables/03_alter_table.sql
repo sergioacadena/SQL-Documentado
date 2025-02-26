@@ -20,5 +20,20 @@ RENAME TO personas7;
 ALTER TABLE personas7
 DROP COLUMN descripcion;
 
+/* Cambia el tipo de dato Y tamaño del dato de una columna */
+ALTER TABLE personas6 
+MODIFY COLUMN descripciony VARCHAR (250);
+
+/* Cambia el nombre de una columna ya existente */
+ALTER TABLE personas6 
+RENAME COLUMN surname TO descripcion;
+
+/* Cambia el nombre de una tabla */
+ALTER TABLE personas6
+RENAME TO personas8;
+
+/* Borra una columna */
+ALTER TABLE personas8
+DROP COLUMN descripcion;
 
 
