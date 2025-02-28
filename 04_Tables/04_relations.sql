@@ -21,7 +21,7 @@ CREATE TABLE users_languages (
 	user_language_id INT PRIMARY KEY AUTO_INCREMENT, /* creo un id para la subtabla combinando los nombres de las dos llaves foraneas */
     user_id INT, language_id INT, /* creo variables para almacenra las llaves foraneas */
     FOREIGN KEY (user_id) REFERENCES users (user_id), v/* indico la variable de la llave foranea y de donde viene la llave */
-	FOREIGN KEY (language_id) REFERENCES language (language_id), /* indico la variable de la llave foranea y de donde viene la llave */
+	FOREIGN KEY (language_id) REFERENCES languages (language_id), /* indico la variable de la llave foranea y de donde viene la llave */
     UNIQUE (user_id, language_id) /* indico que no se puede repetir la combinación de las dos llaves foraneas */
 );
 
