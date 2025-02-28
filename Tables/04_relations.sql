@@ -11,4 +11,29 @@ CREATE TABLE cedula (
 
     );
 
+/*  relación 1:M tabla usuarios con tabla cédulas, usando la lave foranea en usuarios */
+ALTER TABLE users 
+ADD CONSTRAINT fk_companies 
+FOREIGN KEY(company_id) REFERENCES companies(company_id);
+
+/* Crea una una sub-tabla de la relación N:M entre lengujes de progrmación y usuarios, trae las dos lavves foraneas de esa tablas */
+CREATE TABLE users_languages (
+	user_language_id INT PRIMARY KEY AUTO_INCREMENT, /* creo un id para la subtabla combinando los nombres de las dos llaves foraneas */
+    user_id INT, language_id INT, /* creo variables para almacenra las llaves foraneas */
+    FOREIGN KEY (user_id) REFERENCES users (user_id), v/* indico la variable de la llave foranea y de donde viene la llave */
+	FOREIGN KEY (language_id) REFERENCES language (language_id), /* indico la variable de la llave foranea y de donde viene la llave */
+    UNIQUE (user_id, language_id) /* indico que no se puede repetir la combinación de las dos llaves foraneas */
+);
+
+/*  relación M:M tabla usuarios con tabla cédulas, usando una tabla intermedia */
+CREATE TABLE users_cedulas (
+    user_id INT,
+    cedula_id INT,
+    PRIMARY KEY (user_id, cedula_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (cedula_id) REFERENCES cedulas(cedula_id)
+    );
+
+
+
 
