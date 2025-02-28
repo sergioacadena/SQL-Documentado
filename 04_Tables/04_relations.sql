@@ -33,7 +33,9 @@ CREATE TABLE users_cedulas (
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (cedula_id) REFERENCES cedulas(cedula_id)
     );
-
+INSERT INTO users_languages (user_id, language_id) VALUES (2,3);
+INSERT INTO users_languages (user_id, language_id) VALUES (2,6);
+INSERT INTO users_languages (user_id, language_id) VALUES (2,1);
 
 
 
