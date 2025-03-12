@@ -24,7 +24,7 @@ ORDER BY companies.name ASC;
 
 SELECT users.name, email, companies.name FROM users 
 JOIN companies 
-ON users.company_id = companies.company_id
+ON users.company_id = companies.company_id /* ON donde los campos de dos tablas diferentes sean iguales, se combinan */
 ORDER BY companies.name ASC;
 
 /* usamos doble join para las subtablas en caso de relaciones muchos a muchos */
