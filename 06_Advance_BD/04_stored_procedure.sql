@@ -32,3 +32,7 @@ CREATE PROCEDURE p_age_users (IN age_param INT) /* CREO UNA VARIABLE QUE PUEDO U
 END //
 
 CALL p_age_users(20); /* LLAMO EL PROCEDURE Y LE ENVIO EL PARAMETRO 20 */
+
+/* BORRAR */
+DROP PROCEDURE p_age_users; /* elimino el procedure p_age_users */
+
