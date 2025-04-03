@@ -5,3 +5,6 @@ INSERT INTO users (user_id, name, surname) VALUES (7, 'Maria', 'lopez');/* puedo
 /* no puedo insertar identificadores repetidos, si ya existe, genera error, yqque es único */
 INSERT INTO users (user_id, name, surname) VALUES (8, 'Juan', NULL);
 INSERT INTO users (user_id, name, surname) VALUES (9, NULL, 'Garcia');
+
+INSERT INTO users (user_id, name, surname) VALUES (10, NULL, NULL);
+
